@@ -9,9 +9,10 @@
 </head>
 
 <body>
+    <h1>List of products</h1>
     <ul>
-    {% for product in products%}
-        <li>{{ product }}</li>
+    {% for prod in products %}
+        <li>{{ prod }}</li>
     {% endfor %}
     </ul>
     {{ dump(products) }}
