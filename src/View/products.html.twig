@@ -1,14 +1,10 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Products</title>
-    <link rel="icon" href="/assets/images/favicon.png">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
+{% extends 'layout.html.twig' %}
 
-<body>
+{% block title %}
+    {{ parent() }} - Products
+{% endblock %}
+
+{% block content %}
     <h1>List of products</h1>
     <ul>
     {% for prod in products %}
@@ -16,5 +12,5 @@
     {% endfor %}
     </ul>
     {{ dump(products) }}
-</body>
-</html>
+    <a href= "index.php">Back</a>
+{% endblock %}
